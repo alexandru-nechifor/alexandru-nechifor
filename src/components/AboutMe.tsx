@@ -12,19 +12,25 @@ const AboutMe = () => {
   const { classes: grid } = useGridContainer();
   return (
     <section className={classes.section} id="contact">
-      <Grid className={grid.container}>
+      <Grid className={grid.container} data-aos="zoom-in">
         <Grid.Col sm={12}>
           <div className={classes.aboutBox}>
             <Title order={2} className={classes.aboutHeading} weight="lighter">
               About me
             </Title>
-            <img
-              src={AlexPhoto}
-              alt="Alexandru Nechifor"
-              className={classes.cvImg}
-            />
 
-            <Text align="left">{message}</Text>
+            <Grid align="center" gutter="xl">
+              <Grid.Col sm={12} lg={4}>
+                <img
+                  src={AlexPhoto}
+                  alt="Alexandru Nechifor"
+                  className={classes.cvImg}
+                />
+              </Grid.Col>
+              <Grid.Col sm={12} lg={7}>
+                <Text align="left">{message}</Text>
+              </Grid.Col>
+            </Grid>
 
             <a href="mailto:alexandru.nechifor1999@gmail.com">
               <Group className={classes.mail} position="center">

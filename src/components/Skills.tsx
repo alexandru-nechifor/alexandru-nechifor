@@ -10,11 +10,16 @@ const Skills = () => {
     <>
       <section className={classes.section} id="skills">
         <Grid className={grid.container} gutter={30} align="center">
-          {dataSkills.map((item) => {
+          {dataSkills.map((item, index) => {
             const Icon = item.icon;
+
             return (
               <Grid.Col sm={12} md={6} lg={4} key={item.title}>
-                <div className={classes.box}>
+                <div
+                  className={classes.box}
+                  data-aos="fade-down"
+                  data-aos-delay={index * 300}
+                >
                   <Icon className={classes.icon} title={item.title} />
                   <Title order={3} my={15}>
                     {item.title}

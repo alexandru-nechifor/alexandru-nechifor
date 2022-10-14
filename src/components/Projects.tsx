@@ -10,13 +10,23 @@ const Projects = () => {
   return (
     <section className={classes.section} id="projects">
       <Grid className={grid.container} align="center" gutter={20}>
-        <Title order={3} className={classes.pHeading} weight={'normal'}>
+        <Title
+          order={3}
+          className={classes.pHeading}
+          weight={'normal'}
+          data-aos="fade-right"
+        >
           My projects
         </Title>
 
         {dataProjects.map((project) => {
           return (
-            <Grid.Col sm={12} key={project.id} className={classes.col}>
+            <Grid.Col
+              sm={12}
+              key={project.id}
+              className={classes.col}
+              data-aos="fade"
+            >
               <Grid align="center">
                 <Grid.Col lg={5}>
                   <a href={project.href}>

@@ -18,6 +18,7 @@ const Hero = () => {
                 color="white"
                 weight={'lighter'}
                 className={classes.heading}
+                data-aos="fade-right"
               >
                 I am{' '}
                 <span className={classes.headingName}>Alexandru Nechifor</span>
@@ -25,14 +26,19 @@ const Hero = () => {
                 <br />
                 Frontend Developer.
               </Title>
-              <Link to="contact" smooth={true}>
+              <Link
+                to="contact"
+                smooth={true}
+                data-aos="fade-right"
+                data-aos-delay={200}
+              >
                 <button className={classes.button}>Contact me</button>
               </Link>
             </Stack>
           </Grid.Col>
 
           <Grid.Col lg={4} sm={12} order={1} orderLg={2}>
-            <Herosvg className={classes.svg} />
+            <Herosvg className={classes.svg} data-aos="fade-left" />
           </Grid.Col>
         </Grid>
 

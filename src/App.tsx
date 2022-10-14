@@ -14,6 +14,7 @@ function App() {
     AOS.init({
       once: true,
       useClassNames: true,
+      duration: 2000,
     });
   }, []);
   return (

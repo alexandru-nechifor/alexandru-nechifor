@@ -33,13 +33,14 @@ export const useAboutMeStyles = createStyles((theme) => ({
   },
 
   mail: {
-    marginTop: '2rem',
+    margin: 'auto',
     padding: '0.8rem',
     borderRadius: 8,
-    width: 'content-fit',
+    width: 'fit-content',
 
     [theme.fn.smallerThan('md')]: {
       padding: '0.2rem',
+      margin: '2rem auto 0 auto',
     },
     '&:hover': {
       background: theme.colors.accent,
