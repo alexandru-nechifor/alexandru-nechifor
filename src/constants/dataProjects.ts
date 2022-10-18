@@ -1,5 +1,6 @@
 import aiCarnetImg from '../assets/projects/aicarnet.png';
 import GitHub from '../assets/projects/GitHub.png';
+import reset from '../assets/projects/reset.png';
 
 export const dataProjects = [
   {
@@ -12,11 +13,20 @@ export const dataProjects = [
   },
 
   {
+    title: 'Reset',
+    description:
+      'I created from scratch a landing page for a physical therapy business.',
+    href: 'https://jazzy-moxie-b151ea.netlify.app/',
+    img: reset,
+    id: 'Reset-2',
+  },
+
+  {
     title: 'GitHub Profile',
     description:
       'On my GitHub profile I upload projects that I create throughout my process of learning.',
     href: 'https://github.com/alexandru-nechifor',
     img: GitHub,
-    id: 'GitHub-2',
+    id: 'GitHub-3',
   },
 ];

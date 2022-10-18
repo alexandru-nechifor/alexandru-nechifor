@@ -50,11 +50,9 @@ const SideNavbar = () => {
           <Stack justify="center" spacing={10} align="center">
             {socialMedia.map((platform) => {
               return (
-                <NavbarLink
-                  icon={platform.icon}
-                  label={platform.name}
-                  key={platform.id}
-                />
+                <a href={platform.url} key={platform.id}>
+                  <NavbarLink icon={platform.icon} label={platform.name} />
+                </a>
               );
             })}
           </Stack>

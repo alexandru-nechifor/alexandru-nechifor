@@ -37,6 +37,7 @@ export const useAboutMeStyles = createStyles((theme) => ({
     padding: '0.8rem',
     borderRadius: 8,
     width: 'fit-content',
+    color: theme.colors.accent,
 
     [theme.fn.smallerThan('md')]: {
       padding: '0.2rem',
