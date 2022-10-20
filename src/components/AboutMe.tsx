@@ -3,15 +3,16 @@ import { useAboutMeStyles } from '../styles/useAboutMeStyles';
 import { useGridContainer } from '../styles/useGridContainer';
 import AlexPhoto from '../assets/aky.png';
 import { AiOutlineMail } from 'react-icons/ai';
+import { forwardRef } from 'react';
 
 const message =
   'Determined and hard-working person, detail oriented self-learner, problem solver and capable to work in a team to obtain the best outcome possible. Looking forward to broaden my skills and aptitudes in Web Development and make a contribution towards this field. ';
 
-const AboutMe = () => {
+const AboutMe = forwardRef<HTMLElement>((props, ref) => {
   const { classes } = useAboutMeStyles();
   const { classes: grid } = useGridContainer();
   return (
-    <section className={classes.section} id="contact">
+    <section className={classes.section} id="contact" ref={ref}>
       <Grid className={grid.container} data-aos="zoom-in">
         <Grid.Col sm={12}>
           <div className={classes.aboutBox}>
@@ -43,6 +44,6 @@ const AboutMe = () => {
       </Grid>
     </section>
   );
-};
+});
 
 export default AboutMe;

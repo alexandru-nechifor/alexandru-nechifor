@@ -1,14 +1,15 @@
 import { Grid, Title, Text } from '@mantine/core';
+import { forwardRef } from 'react';
 import { dataProjects } from '../constants/dataProjects';
 import { useGridContainer } from '../styles/useGridContainer';
 import { useProjectsStyles } from '../styles/useProjectsStyles';
 
-const Projects = () => {
+const Projects = forwardRef<HTMLElement>((props, ref) => {
   const { classes } = useProjectsStyles();
   const { classes: grid } = useGridContainer();
 
   return (
-    <section className={classes.section} id="projects">
+    <section className={classes.section} id="projects" ref={ref}>
       <Grid className={grid.container} align="center" gutter={20}>
         <Title
           order={3}
@@ -57,6 +58,6 @@ const Projects = () => {
       </Grid>
     </section>
   );
-};
+});
 
 export default Projects;

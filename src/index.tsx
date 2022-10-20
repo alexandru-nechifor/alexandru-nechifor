@@ -50,6 +50,7 @@ root.render(
       }}
     >
       <CustomFonts />
+
       <App />
     </MantineProvider>
   </React.StrictMode>

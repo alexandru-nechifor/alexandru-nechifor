@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import './App.css';
 import AboutMe from './components/AboutMe';
 import Hero from './components/Hero';
@@ -17,14 +17,25 @@ function App() {
       duration: 2000,
     });
   }, []);
+
+  const homeRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
+  const projectsRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
+
   return (
     <>
-      <SideNavbar />
+      <SideNavbar
+        homeRef={homeRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
       <ShootingStars />
-      <Hero />
-      <Skills />
-      <Projects />
-      <AboutMe />
+      <Hero ref={homeRef} />
+      <Skills ref={skillsRef} />
+      <Projects ref={projectsRef} />
+      <AboutMe ref={contactRef} />
     </>
   );
 }

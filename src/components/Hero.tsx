@@ -1,15 +1,16 @@
 import { Grid, Stack, Title } from '@mantine/core';
+import { forwardRef } from 'react';
 import { Link } from 'react-scroll';
 import { ReactComponent as Herosvg } from '../assets/herosvg.svg';
 import { useGridContainer } from '../styles/useGridContainer';
 import { useHeroStyles } from '../styles/useHeroStyles';
 
-const Hero = () => {
+const Hero = forwardRef<HTMLElement>((props, ref) => {
   const { classes } = useHeroStyles();
   const { classes: grid } = useGridContainer();
   return (
     <>
-      <section className={classes.hero} id="home">
+      <section className={classes.hero} id="home" ref={ref}>
         <Grid className={grid.container} align="center">
           <Grid.Col lg={8} sm={12} order={2} orderLg={1}>
             <Stack>
@@ -52,6 +53,6 @@ const Hero = () => {
       </section>
     </>
   );
-};
+});
 
 export default Hero;

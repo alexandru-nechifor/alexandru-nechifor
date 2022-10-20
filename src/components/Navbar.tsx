@@ -1,15 +1,49 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { links, socialMedia } from '../constants/navigation';
 import { Navbar, Center, Stack } from '@mantine/core';
 import Logo from '../assets/logo.png';
-
 import { useNavbarStyles } from '../styles/useNavbarStyles';
 import { NavbarLink } from '../utils/NavbarLink';
 import { Link } from 'react-scroll';
 
-const SideNavbar = () => {
+const SideNavbar = ({ homeRef, projectsRef, skillsRef, contactRef }: any) => {
   const [active, setActive] = useState(0);
   const { classes } = useNavbarStyles();
+
+  useEffect(() => {
+    let observer: any;
+    if (
+      homeRef.current &&
+      skillsRef.current &&
+      projectsRef.current &&
+      contactRef.current
+    ) {
+      const options = {
+        threshold: 0.5,
+      };
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log(entry.target);
+            if (entry.target.id === 'home') {
+              setActive(0);
+            } else if (entry.target.id === 'skills') {
+              setActive(1);
+            } else if (entry.target.id === 'projects') {
+              setActive(2);
+            } else if (entry.target.id === 'contact') {
+              setActive(3);
+            }
+          }
+        });
+      }, options);
+      observer.observe(homeRef.current);
+      observer.observe(skillsRef.current);
+      observer.observe(projectsRef.current);
+      observer.observe(contactRef.current);
+    }
+    return () => observer.disconnect();
+  }, [homeRef, projectsRef, skillsRef, contactRef]);
 
   return (
     <>
@@ -38,7 +72,6 @@ const SideNavbar = () => {
                     icon={item.icon}
                     label={item.name}
                     active={index === active}
-                    onClick={() => setActive(index)}
                   />
                 </Link>
               );

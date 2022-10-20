@@ -1,14 +1,16 @@
 import { Grid, Title, Text, Group } from '@mantine/core';
+import { forwardRef } from 'react';
 import { dataSkills } from '../constants/dataSkills';
 import { useGridContainer } from '../styles/useGridContainer';
 import { useSkillStyles } from '../styles/useSkillsStyles';
 
-const Skills = () => {
+const Skills = forwardRef<HTMLElement>((props, ref) => {
   const { classes } = useSkillStyles();
   const { classes: grid } = useGridContainer();
+
   return (
     <>
-      <section className={classes.section} id="skills">
+      <section className={classes.section} id="skills" ref={ref}>
         <Grid className={grid.container} gutter={30} align="center">
           {dataSkills.map((item, index) => {
             const Icon = item.icon;
@@ -47,6 +49,6 @@ const Skills = () => {
       </section>
     </>
   );
-};
+});
 
 export default Skills;

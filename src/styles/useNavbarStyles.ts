@@ -37,7 +37,7 @@ export const useNavbarStyles = createStyles((theme) => ({
 
   active: {
     '&, &:hover': {
-      backgroundColor: theme.colors.secondary,
+      backgroundColor: theme.colors.dark[6],
       color: theme.colors.blue[6],
     },
   },

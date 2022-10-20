@@ -33,6 +33,7 @@ export const useProjectsStyles = createStyles((theme) => ({
     fontSize: '2.5rem',
     position: 'relative',
     overflow: 'hidden',
+    width: 'fit-content',
 
     '&:before': {
       content: '""',
@@ -42,16 +43,13 @@ export const useProjectsStyles = createStyles((theme) => ({
       bottom: 0,
       left: 0,
       right: 0,
-      transform: 'translateX(-400px)',
       transition: 'all 0.5s ease',
-      [theme.fn.smallerThan('md')]: {
-        transform: 'translateX(-100px)',
-      },
     },
 
     '&:hover': {
       '&:before': {
-        transform: 'translateX(-150px)',
+        left: '30%',
+        right: '30%',
       },
     },
   },
@@ -64,6 +62,13 @@ export const useProjectsStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('md')]: {
       marginTop: '1rem',
       width: '100%',
+    },
+
+    [theme.fn.largerThan('md')]: {
+      transition: 'all 0.3s ease',
+      '&:hover': {
+        boxShadow: `1px 1px 20px ${theme.colors.accent} `,
+      },
     },
   },
 }));
