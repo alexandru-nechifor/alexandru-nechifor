@@ -27,7 +27,7 @@ const Projects = () => {
               className={classes.col}
               data-aos="fade"
             >
-              <Grid align="center">
+              <Grid align="center" justify="space-between">
                 <Grid.Col lg={5}>
                   <a href={project.href}>
                     <Title
@@ -42,11 +42,13 @@ const Projects = () => {
                   <Text mt={15}>{project.description}</Text>
                 </Grid.Col>
                 <Grid.Col lg={5}>
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className={classes.projectImg}
-                  />
+                  <a href={project.href}>
+                    <img
+                      src={project.img}
+                      alt={project.title}
+                      className={classes.projectImg}
+                    />
+                  </a>
                 </Grid.Col>
               </Grid>
             </Grid.Col>

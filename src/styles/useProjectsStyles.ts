@@ -57,14 +57,12 @@ export const useProjectsStyles = createStyles((theme) => ({
   },
 
   projectImg: {
+    display: 'block',
     width: '80%',
-    position: 'relative',
-    top: 0,
-    right: '-100%',
     borderRadius: 10,
+    marginLeft: 'auto',
     [theme.fn.smallerThan('md')]: {
       marginTop: '1rem',
-      position: 'inherit',
       width: '100%',
     },
   },

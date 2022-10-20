@@ -17,11 +17,14 @@ export const useAboutMeStyles = createStyles((theme) => ({
     padding: 25,
     borderRadius: 8,
     margin: '0 auto',
-    width: '50%',
+    width: '100%',
     textAlign: 'center',
 
-    [theme.fn.smallerThan('md')]: {
-      width: '100%',
+    [theme.fn.largerThan('lg')]: {
+      width: '70%',
+    },
+    [theme.fn.largerThan('xl')]: {
+      width: '60%',
     },
   },
 
