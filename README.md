@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Alexandru Nechifor</h1>
-<h3 align="center">Determined and hard-working person, detail oriented self-learner, problem solver and capable to work in a team to obtain the best outcome possible. Looking forward to broaden my skills and aptitudes in Web Development and make a contribution towards this field.</h3>
+<h4 align="left">Determined and hard-working person, detail oriented self-learner, problem solver and capable to work in a team to obtain the best outcome possible. Looking forward to broaden my skills and aptitudes in Web Development and make a contribution towards this field.</h4>
 
 - 🔭 I’m currently working on [aiCarnet](https://aicarnet.vercel.app)
 
-- 🌱 I’m currently learning **React, NextJS**
+- 🌱 I’m currently getting better at **React, NextJS, Redux Toolkit, React Query**
 
 - 📫 How to reach me **alexandru.nechifor1999@gmail.com**
 
