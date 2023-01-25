@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Alexandru Nechifor</h1>
-<h4 align="left">Determined and hard-working person, detail oriented self-learner, problem solver and capable to work in a team to obtain the best outcome possible. Looking forward to broaden my skills and aptitudes in Web Development and make a contribution towards this field.</h4>
+<h3 align="center">Junior Frontend Developer</h3>
 
 - 🔭 I’m currently working on [aiCarnet](https://aicarnet.vercel.app)
 
