@@ -15,7 +15,7 @@ export const dataProjects = [
   {
     title: 'Reset',
     description:
-      'I created from scratch a landing page for a physical therapy business.',
+      "I designed and developed a physical therapy business web application, featuring a landing page, a user panel, and an admin panel page. This app allows users to view their appointments (past, present and future), personal data, and related information (for example, diagnostique). Meanwhile, administrators can create new appointments, edit user's data and perform other essential tasks.",
     href: 'https://jazzy-moxie-b151ea.netlify.app/',
     img: reset,
     id: 'Reset-2',
